@@ -1,14 +1,14 @@
-import { Chriscarmel.Github.IoPage } from './app.po';
+import { ChriscarmelGithubIoPage } from './app.po';
 
 describe('chriscarmel.github.io App', () => {
-  let page: Chriscarmel.Github.IoPage;
+  let page: ChriscarmelGithubIoPage;
 
   beforeEach(() => {
-    page = new Chriscarmel.Github.IoPage();
+    page = new ChriscarmelGithubIoPage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Hello, world!');
   });
 });

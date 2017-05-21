@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class Chriscarmel.Github.IoPage {
+export class ChriscarmelGithubIoPage {
   navigateTo() {
     return browser.get('/');
   }
