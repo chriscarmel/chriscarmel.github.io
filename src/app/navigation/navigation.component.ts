@@ -1,10 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
-const SECTION_HEADING_ARRAY: Array<string> = [
-  'Projects',
-  'Languages',
-  'Frameworks',
-  'About'
+class NavigationSection {
+  public heading: string;
+  public url: string;
+
+  public constructor(
+    heading: string,
+    url: string
+  ) {
+    this.heading = heading;
+    this.url = url;
+  }
+}
+
+const NAVIGATION_SECTION_ARRAY: Array<NavigationSection> = [
+  new NavigationSection('Projects', '/projects'),
+  new NavigationSection('Languages', '/languages'),
+  new NavigationSection('Frameworks', '/frameworks'),
+  new NavigationSection('Concepts', '/concepts'),
+  new NavigationSection('About', '/about')
 ];
 
 @Component({
@@ -14,10 +28,10 @@ const SECTION_HEADING_ARRAY: Array<string> = [
 })
 export class NavigationComponent implements OnInit {
 
-  public sectionHeadingArray: Array<string>;
+  public navigationSectionArray: Array<NavigationSection>;
 
   public constructor() {
-    this.sectionHeadingArray = SECTION_HEADING_ARRAY;
+    this.navigationSectionArray = NAVIGATION_SECTION_ARRAY;
   }
 
   public ngOnInit(): void {

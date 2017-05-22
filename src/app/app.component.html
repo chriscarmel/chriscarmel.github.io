@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<header>
+<header
+  class="app__header"
+  routerLink="/">
   <h1>Chris Carmel</h1>
   <h2>Software Developer</h2>
 </header>
@@ -7,42 +9,11 @@
 <cc-navigation></cc-navigation>
 
 <main>
-  <section>
-    <header>
-      <h1>Projects</h1>
-    </header>
-
-    <article>
-      <header>
-        <h1>YAML Project</h1>
-      </header>
-
-      <p>YAML Ain't Markup Language</p>
-
-      <footer>
-        <p>Work in progress</p>
-      </footer>
-    </article>
-
-    <article>
-      <header>
-        <h1>Python Project</h1>
-      </header>
-
-      <p>Python is whitespace sensitive!</p>
-
-      <footer>
-        <p>Work in progress</p>
-      </footer>
-    </article>
-
-    <footer>
-      <p>These are software projects</p>
-    </footer>
-  </section>
+  <router-outlet></router-outlet>
 </main>
 
-<footer>
+<footer
+  class="app__footer">
   <p>Chris Carmel</p>
   <p>Software Developer</p>
 </footer>
